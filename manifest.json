@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Redirect to archive.is",
+  "version": "1.0",
+  "description": "Single keystroke redirection to archived version of current page.",
+  "permissions": [
+    "webNavigation",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://archive.is/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "go_to_archive_page": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+4",
+        "mac": "MacCtrl+Shift+4"
+      },
+      "description": "Redirect to archive of current page."
+    }
+  }
+}
